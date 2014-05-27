@@ -1,0 +1,6 @@
+{
+  "name": "Directory Informations",
+  "version": "v0.1",
+  "main": "./dirInfos.js",
+  "description": "Ditectory Informations."
+}
