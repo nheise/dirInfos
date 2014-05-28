@@ -19,6 +19,9 @@ function DirInfo( path, callback ) {
 	}
 
 	function readDirReady( error, files ) {
+		if( error ) {
+			callback( error );
+		}
 		fileCount = files.length;
 		for( file in files ) {
 			var filename = files[file];
@@ -66,7 +69,7 @@ function FileInfo( path, filename, callback ) {
 new DirInfo( ".", function( error, dirInfo ) {
 	console.log( JSON.stringify( dirInfo ) );
 }).read();
-new DirInfo( "./video", function( error, dirInfo ) {
+new DirInfo( "./videos", function( error, dirInfo ) {
 	console.log( JSON.stringify( dirInfo ) );
 }).read();
 */
