@@ -22,10 +22,12 @@ function DirInfo( path, callback ) {
 		if( error ) {
 			callback( error );
 		}
-		fileCount = files.length;
-		for( file in files ) {
-			var filename = files[file];
-			new FileInfo( path, filename, readStatReady ).readStats();
+		else {
+			fileCount = files.length;
+			for( file in files ) {
+				var filename = files[file];
+				new FileInfo( path, filename, readStatReady ).readStats();
+			}
 		}
 	}
 
